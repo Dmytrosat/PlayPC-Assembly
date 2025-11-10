@@ -201,7 +201,7 @@ input {
     margin-bottom: 10px;
 }
 
-.course__counter-line, 
+.course__counter-line,
 .course__progress-label {
     color: #FFFFFF40;
 }
@@ -383,7 +383,7 @@ progress::-moz-progress-value {
 }
 
 .program-line {
-    display: flex;    
+    display: flex;
     justify-content: space-between;
     width: 750px;
 }
@@ -567,10 +567,20 @@ progress::-moz-progress-value {
 }
 
 .modal__inner {
+    position: relative;
     width: 66.3rem;
     padding: 9rem 9.5rem;
     background: #2C2C2C;
     text-align: center;
+}
+
+.modal__close {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    width: 5rem;
+    height: 5rem;
+    cursor: pointer;
 }
 
 .modal__header {
