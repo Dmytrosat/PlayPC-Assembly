@@ -13,7 +13,7 @@
     <script src="./js/modal.js" defer></script>
     <script src="./js/smoothScroll.js" defer></script>
     <script src="./js/timer.js" defer></script>
-</head>
+    <script src="./js/sendForm.js" defer></script>
 </head>
 
 <body>
@@ -292,7 +292,7 @@
         </section>
     </main>
     <!-- form -->
-    <form action="#" class="modal block-center">
+    <form action="#" method="POST" class="modal block-center" >
         <div class="modal__inner">
             <div class="modal__close">
                 <img src="./img/close.svg" alt="close" />
@@ -303,16 +303,16 @@
             </div>
             <div class="modal__elements block-center-horis">
                 <div class="modal__input">
-                    <input type="text" class="modal__input" />
+                    <input type="text" name="name" class="modal__input" placeholder="name" required />
                 </div>
                 <div class="modal__input">
-                    <input type="tel" class="modal__input" />
+                    <input type="tel" name="phone" class="modal__input" placeholder="phone" required />
                 </div>
                 <div class="modal__input">
-                    <input type="email" class="modal__input" />
+                    <input type="email" name="email" class="modal__input" placeholder="email" required />
                 </div>
-                <button type="button" class="button modal__button">
-                    Оставить заявку
+                <button type="submit" class="button modal__button">
+                    Отправить
                 </button>
             </div>
         </div>
