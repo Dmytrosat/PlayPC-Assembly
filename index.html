@@ -14,6 +14,7 @@
     <script src="./js/smoothScroll.js" defer></script>
     <script src="./js/timer.js" defer></script>
     <script src="./js/sendForm.js" defer></script>
+    <script src="./js/animation.js" defer></script>
 </head>
 
 <body>
@@ -81,13 +82,26 @@
                             <span class="course__number">190</span>
                         </div>
                     </div>
-                    <div class="course__progress">
+                    <!-- <div class="course__progress">
                         <div class="course__progress-label">
                             <span>Заработано учениками:</span>
                             <span class="course__number">400 000₽</span>
                         </div>
                         <div class="course__progress-element">
                             <progress min="0" max="1000000" value="400000" />
+                        </div>
+                        <div class="course__progress-minmax">
+                            <span>0₽</span>
+                            <span>1 000 000₽</span>
+                        </div>
+                    </div> -->
+                    <div class="course__progress" id="earningsBlock">
+                        <div class="course__progress-label">
+                            <span>Заработано учениками:</span>
+                            <span class="course__number" id="earnedAmount">0₽</span>
+                        </div>
+                        <div class="course__progress-element">
+                            <progress id="earningsProgress" min="0" max="1000000" value="0"></progress>
                         </div>
                         <div class="course__progress-minmax">
                             <span>0₽</span>
@@ -292,7 +306,7 @@
         </section>
     </main>
     <!-- form -->
-    <form action="#" method="POST" class="modal block-center" >
+    <form action="#" method="POST" class="modal block-center">
         <div class="modal__inner">
             <div class="modal__close">
                 <img src="./img/close.svg" alt="close" />
